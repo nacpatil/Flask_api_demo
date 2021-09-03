@@ -1,14 +1,6 @@
 <html>
-   <head>
-      <style>
-      h2s {text-align: center;}
-      </style>
-      </head>
-
-   <center>
    <body>
-   <h1>Add new student and grades </h1>
-
+      <h2> Edit existing students grades  </h2>
       <form action = "http://localhost:5000/result" method = "POST">
          <p>Student Name <input type = "text" name = "Name" /></p>
          <p>Physics <input type = "text" name = "Physics" /></p>
@@ -17,23 +9,19 @@
          <p><input type = "submit" value = "Submit Grades" /></p>
       </form>
    </body>
-</center>
    <br>
    <br>
-   <center>
    <body>
       <form id ="form_s" action = "http://localhost:5000/fulllist" method = "GET">
          <p><input type = "submit"  style="background-color:lightgreen; font-size : 20px; width: 70%; height: 60;" value = "Get Grades of all Students"  /></p> 
       </form>
    </body>
-   </center>
 
-   <center>
+
    <body>
-      <form id ="form_s" action = "http://localhost:5000/editstudent" method = "GET">
-         <p><input type = "submit"  style="background-color:rgb(238, 144, 152); font-size : 20px; width: 50%; height: 60;" value = "Edit previous grades"  /></p> 
+      <form id ="form_s" action = "http://localhost:5000/fulllist" method = "GET">
+         <p><input type = "submit"  style="background-color:lightgreen; font-size : 20px; width: 70%; height: 60;" value = "Get Grades of all Students"  /></p> 
       </form>
    </body>
-   </center>
-
+   
 </html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+   <body>
+      <p>
+         <h2>Old Entry</h2>
+         <table border = 1>
+            {% for key, value in old_result.items() %}
+               <tr>
+                  <th> {{ key }} </th>
+                  <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+         </table>
+      </p>
+   </body>
+   <body>
+      <table hidden id="myTable" border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+
+
+
+   
+
+<script>
+   function myFunction() {
+      var elm=document.getElementById("myTable")
+      var fm=document.getElementById("form_s")
+      fm[0].placeholder = elm.rows[0].cells[1].innerHTML
+      fm[1].placeholder = elm.rows[1].cells[1].innerHTML
+      fm[2].placeholder = elm.rows[2].cells[1].innerHTML
+      fm[3].placeholder = elm.rows[3].cells[1].innerHTML
+
+      fm[0].value = elm.rows[0].cells[1].innerHTML
+      fm[1].value = elm.rows[1].cells[1].innerHTML
+      fm[2].value = elm.rows[2].cells[1].innerHTML
+      fm[3].value = elm.rows[3].cells[1].innerHTML
+      //alert(document.getElementById("myTable").rows[1].cells[1].innerHTML);
+    
+
+   }
+</script>
+<body onload="javascript:myFunction()">
+
+   <body>
+      <h2>Submit Change</h2>
+      <form id ="form_s" action = "http://localhost:5000/update" method = "POST">
+         <p hidden>Student Name <input type = "text" name = "Name" placeholder=""  value="" /></p>
+         <p> Physics <input type = "text" name = "Physics" placeholder="" value="" /></p>
+         <p>Chemistry <input type = "text" name = "chemistry" placeholder="" value="" /></p>
+         <p>Maths <input type ="text" name = "Mathematics" placeholder="" value="" /></p>
+         <p><input type = "submit" value = "Submit Change"  /></p>
+      </form>
+   </body>
+
+
+      
+      
+
+</html>
+
+

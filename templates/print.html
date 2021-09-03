@@ -1,0 +1,30 @@
+<html>
+   <body>
+      <p>
+         <h2>List of Students and Grades</h2>
+         <table border = 1>
+            {% for ttl in headings %}
+                <td> {{ ttl }} </td>
+            {% endfor %}
+            {% for key, value in dict.items() %}
+            <tr>
+
+                            {% for sub, grade in value.items() %}
+
+                                <td> {{ grade }} </td>
+
+                            {% endfor %}
+            </tr>
+            {% endfor %}
+            
+         </table>
+      </p>
+   </body>
+
+   <br><br><br><br><br>
+
+   <form action="http://localhost:5000/">
+    <p><input type = "submit"  style="background-color:rgb(146, 144, 238); font-size : 14px; width: 70%; height: 30;" value = "Go to Homepage"  /></p> 
+   </form>
+
+<html>
