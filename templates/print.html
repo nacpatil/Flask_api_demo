@@ -10,8 +10,11 @@
             <tr>
 
                             {% for sub, grade in value.items() %}
-
-                                <td> {{ grade }} </td>
+                                {% if sub == 'Name' %}
+                                    <td > <a href="http://localhost:5000/studenteditlink/{{ grade }}">{{ grade }}</a> </td>
+                                {%else%}
+                                    <td> {{ grade }} </td>
+                                {%endif%}
 
                             {% endfor %}
             </tr>

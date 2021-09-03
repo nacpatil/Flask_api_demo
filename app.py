@@ -51,5 +51,9 @@ def fulllist():
 def editstudent():
       return render_template('editheader.html')
 
+@app.route('/studenteditlink/<string:iname>',methods = [ 'GET'])
+def studenteditlink(iname):
+      return render_template('editstudent.html',sname=iname)
+
 if __name__ == '__main__':
    app.run(debug = True)
