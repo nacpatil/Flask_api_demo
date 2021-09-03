@@ -2,7 +2,7 @@
 <html>
    <body>
       <p>
-         <h2>Old Entry</h2>
+         <h2>Old Grades</h2>
          <table border = 1>
             {% for key, value in old_result.items() %}
                <tr>
@@ -49,7 +49,7 @@
 <body onload="javascript:myFunction()">
 
    <body>
-      <h2>Submit Change</h2>
+      <h2>Changed Grades</h2>
       <form id ="form_s" action = "http://localhost:5000/update" method = "POST">
          <p hidden>Student Name <input type = "text" name = "Name" placeholder=""  value="" /></p>
          <p> Physics <input type = "text" name = "Physics" placeholder="" value="" /></p>

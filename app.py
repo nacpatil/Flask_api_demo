@@ -53,7 +53,8 @@ def editstudent():
 
 @app.route('/studenteditlink/<string:iname>',methods = [ 'GET'])
 def studenteditlink(iname):
-      return render_template('editstudent.html',sname=iname)
+      name_var=data[iname]
+      return render_template('editstudent.html',sname=iname,  obj=name_var)
 
 if __name__ == '__main__':
    app.run(debug = True)

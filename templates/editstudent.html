@@ -4,9 +4,9 @@
          <h2> Edit existing students grades  </h2>
          <form action = "http://localhost:5000/result" method = "POST">
             <p>Student Name <input type = "text" name = "Name", value = {{sname}} /></p>
-            <p>Physics <input type = "text" name = "Physics" /></p>
-            <p>Chemistry <input type = "text" name = "chemistry" /></p>
-            <p>Maths <input type ="text" name = "Mathematics" /></p>
+            <p>Physics <input type = "text" name = "Physics" value = {{obj.Physics}} /></p>
+            <p>Chemistry <input type = "text" name = "chemistry" value = {{obj.Chemistry}} /></p>
+            <p>Maths <input type ="text" name = "Mathematics" value = {{obj.Mathematics}} /></p>
             <p><input type = "submit" value = "Submit Grades" /></p>
          </form>
    
