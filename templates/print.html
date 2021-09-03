@@ -3,18 +3,19 @@
        <center>
       <p>
          <h2>List of Students and Grades</h2>
-         <table border = 1 style="background-color:rgb(179, 204, 208)">
+         <br><br>
+         <table border = 1 style="background-color:rgb(179, 204, 208); width:60%" >
             {% for ttl in headings %}
-                <td> {{ ttl }} </td>
+                <td><center><b> {{ ttl }} </b></center></td> 
             {% endfor %}
             {% for key, value in dict.items() %}
             <tr>
 
                             {% for sub, grade in value.items() %}
                                 {% if sub == 'Name' %}
-                                    <td > <a href="http://localhost:5000/studenteditlink/{{key}}">{{ grade }}</a> </td>
+                                    <td > <center> <a href="http://localhost:5000/studenteditlink/{{key}}">{{ grade }}</a> <center> </td>
                                 {%else%}
-                                    <td> {{ grade }} </td>
+                                    <td> <center> {{ grade }} </center> </td>
                                 {%endif%}
 
                             {% endfor %}
