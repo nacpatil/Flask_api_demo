@@ -47,9 +47,7 @@ def fulllist():
 
 
 
-@app.route('/editstudent',methods = [ 'GET'])
-def editstudent():
-      return render_template('editheader.html')
+
 
 @app.route('/studenteditlink/<string:iname>',methods = [ 'GET'])
 def studenteditlink(iname):
