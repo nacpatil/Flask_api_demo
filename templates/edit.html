@@ -16,7 +16,9 @@
             {% endfor %}
          </table>
       </p>
-      <table hidden id="myTable"  border = 1>
+      <p>
+         <h2>New Grades</h2>
+         <table id="myTable"  border = 1>
          {% for key, value in result.items() %}
             <tr>
                <th> {{ key }} </th>
@@ -24,5 +26,6 @@
             </tr>
          {% endfor %}
       </table>
+   </p>
    </body>
 </html>
