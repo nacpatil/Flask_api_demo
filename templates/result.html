@@ -1,9 +1,15 @@
+<!-- result.html -->
 <!doctype html>
 <html>
-   <center>
-      <h2> New submission accepted for student: {{result.Name}}  </h2>
-   <body>
-      <table border = 1>
+   <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+   </head>
+  <body>
+   
+      <h2> New submission accepted for student : 
+        <span id="name">{{result.Name}}</span></h2>
+   
+      <table border = 1 id="students">
          {% for key, value in result.items() %}
             <tr>
                <th> {{ key }} </th>
@@ -11,11 +17,14 @@
             </tr>
          {% endfor %}
       </table>
+   <br><br>
+    
+   <form id ="form_s" action = "http://localhost:5000/" method = "GET">
+      <p><input type = "submit" 
+                id="submit"
+                value = "Homepage"  /></p> 
+   </form>   
+   
    </body>
 
-   <br><br>
-   <form id ="form_s" action = "http://localhost:5000/" method = "GET">
-      <p><input type = "submit"  style="background-color:rgb(238, 147, 144); font-size : 20px; width: 70%; height: 60;" value = "Homepage"  /></p> 
-   </form>   
-   </center>
 </html>
