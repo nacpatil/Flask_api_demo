@@ -1,32 +1,30 @@
 <html>
-   <center>
+   <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/editstudent.css') }}">
+   </head>
       <body>
-         <h2> Edit existing students grades  </h2>
+         <h2 style="color:rgb(7, 3, 194);"> Edit existing students grades  </h2>
+        <br/>
+        
          <form action = "http://localhost:5000/result" method = "POST">
-            <p>Student Name <input type = "text" name = "Name", value = {{sname}} /></p>
-            <p>Physics <input type = "text" name = "Physics" value = {{obj.Physics}} /></p>
-            <p>Chemistry <input type = "text" name = "Chemistry" value = {{obj.Chemistry}} /></p>
-            <p>Maths <input type ="text" name = "Mathematics" value = {{obj.Mathematics}} /></p>
-            <p><input type = "submit" value = "Submit Grades" /></p>
+           <p><label>Student Name</label> <input type = "text" name = "Name", value = {{sname}} /></p>
+           <p><label>Physics</label> <input type = "text" name = "Physics" value = {{obj.Physics}} /></p>
+           <p><label>Chemistry </label><input type = "text" name = "Chemistry" value = {{obj.Chemistry}} /></p>
+           <p><label>Maths</label> <input type ="text" name = "Mathematics" value = {{obj.Mathematics}} /></p>
+            <input id="submit"
+                      type = "submit" value = "Submit Grades" />
          </form>
-   
-      </body>
+
       <br>
       <br>
-      <body>
-         <form id ="form_s" action = "http://localhost:5000/fulllist" method = "GET">
-            <p><input type = "submit"  style="background-color:lightgreen; font-size : 20px; width: 70%; height: 60;" value = "Get Grades of all Students"  /></p> 
+        <form id ="form_s" class="actionsForm" action = "http://localhost:5000/fulllist" method = "GET">
+            <p>
+              <input type = "submit"  style="background-color:lightgreen;"
+                     value = "Get Grades of all Students"  /> </p>
          </form>
-      </body>
-
-
-
-      
-
-      <br>
-
-      <form action="http://localhost:5000/">
-         <p><input type = "submit"  style="background-color:rgb(146, 144, 238); font-size : 18px; width: 70%; height: 50;" value = "Go to Homepage"  /></p> 
-     </form>
-   </center>
+      <form class="actionsForm" action="http://localhost:5000/">
+      <p>
+         <input type = "submit"  style="background-color:rgb(146, 144, 238);" value = "Go to Homepage"  /></p>
+        </form>
+        </body>
 </html>
