@@ -53,7 +53,7 @@
 
    <body>
       <h2>Changed Grades</h2>
-      <form id ="form_s" action = "http://localhost:5000/update" method = "POST">
+      <form id ="form_s" action = "{{ url_for('update')}}" method = "POST">
          <p hidden>Student Name <input type = "text" name = "Name" placeholder=""  value="" /></p>
          <p> Physics <input type = "text" name = "Physics" placeholder="" value="" /></p>
          <p>Chemistry <input type = "text" name = "Chemistry" placeholder="" value="" /></p>

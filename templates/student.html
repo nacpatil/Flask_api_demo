@@ -8,7 +8,7 @@
       <br>
    <h2 style="color:rgb(8, 134, 230);">Add new Student </h2>
 
-      <form action = "http://localhost:5000/result" method = "POST">
+      <form action = "{{ url_for('result')}}"  method = "POST">
          <p>Student Name <input type = "text" name = "Name" /></p>
          <p>Physics <input type = "text" name = "Physics" /></p>
          <p>Chemistry <input type = "text" name = "Chemistry" /></p>
@@ -21,7 +21,7 @@
    <br>
    <center>
    <body>
-      <form id ="form_s" action = "http://localhost:5000/fulllist" method = "GET">
+      <form id ="form_s" action = "{{ url_for('fulllist')}}" method = "GET">
          <p><input type = "submit"  style="background-color:lightgreen; font-size : 20px; width: 70%; height: 60;" value = "Get Grades of all Students"  /></p> 
       </form>
    </body>
