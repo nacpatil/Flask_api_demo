@@ -55,4 +55,4 @@ def studenteditlink(iname):
       return render_template('editstudent.html',sname=iname,  obj=name_var)
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(host="0.0.0.0",port=80)
