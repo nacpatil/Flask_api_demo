@@ -13,7 +13,7 @@
 
                             {% for sub, grade in value.items() %}
                                 {% if sub == 'Name' %}
-                                    <td > <center> <a href= "{{ url_for('predict')}}/{{key}}">{{ grade }}</a> <center> </td>
+                                    <td > <center> <a href= "{{ url_for('result')}}/{{key}}">{{ grade }}</a> <center> </td>
                                 {%else%}
                                     <td> <center> {{ grade }} </center> </td>
                                 {%endif%}
